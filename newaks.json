@@ -1,12 +1,12 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-     "metadata": {
-      "_generator": {
-        "name": "bicep",
-        "version": "0.9.1.41621",
-        "templateHash": "2637152180661081755"
-      }
+    "metadata": {
+        "_generator": {
+            "name": "bicep",
+            "version": "0.9.1.41621",
+            "templateHash": "2637152180661081755"
+        }
     },
     "parameters": {
         "storageAccounts_glamblobstorage_name": {
@@ -30,8 +30,8 @@
                 "tier": "Standard"
             }
         },
-       
-    
+
+
         {
             "type": "Microsoft.Storage/storageAccounts/queueServices",
             "apiVersion": "2023-01-01",
@@ -58,7 +58,7 @@
                 }
             }
         },
-          
+
         {
             "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
             "apiVersion": "2023-01-01",
