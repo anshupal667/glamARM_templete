@@ -1,0 +1,28 @@
+# Starter pipeline
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Subscription'
+    azureResourceManagerConnection: 'MSFH-Subscription(f4e709ca-ccb8-4e46-b0b0-822db3762d86)'
+    subscriptionId: 'f4e709ca-ccb8-4e46-b0b0-822db3762d86'
+    location: 'Central India'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fonelogica-com%2Fglam_ARM%2Fmain%2Fnewaks.json'
+    deploymentMode: 'Incremental'
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
